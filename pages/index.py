@@ -16,17 +16,20 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## The Perfect Playcaller
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            What is the best play to call in a given situation?
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
+            Use this app to see which play has the highest chance to be 
+            successful given the offense, defense, time left on the clock 
+            and the yardline of where the offense is.
 
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            If past trends continue, how can you make the most out of a team's 
+            offense to exploit their opponent's defensive weaknesses.
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Make the Playcall!', color='primary'), href='/predictions')
     ],
     md=4,
 )
