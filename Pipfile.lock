@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7d3cc2871e11b3754ea0356c13e324d3e93992d9de0bdf941a061e0a58f55831"
+            "sha256": "ac1933f90b53738fa28f51a02743e93668671b487a85164bb1f07fbf5b59b509"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -50,13 +50,6 @@
                 "sha256:fadd16a2b4ea8abc60b72c08b5a9d6c1a86eb1f56e926be67773259f47eb9048"
             ],
             "version": "==1.5.1"
-        },
-        "dash-daq": {
-            "hashes": [
-                "sha256:98ffce2946374140b630e9659f50262512a9f7adfa6ab22a88dac301d0b49208"
-            ],
-            "index": "pypi",
-            "version": "==0.3.1"
         },
         "dash-html-components": {
             "hashes": [
@@ -119,11 +112,11 @@
         },
         "joblib": {
             "hashes": [
-                "sha256:006108c7576b3eb6c5b27761ddbf188eb6e6347696325ab2027ea1ee9a4b922d",
-                "sha256:6fcc57aacb4e89451fd449e9412687c51817c3f48662c3d8f38ba3f8a0a193ff"
+                "sha256:21e0c34a69ad7fde4f2b1f3402290e9ec46f545f15f1541c582edfe05d87b63a",
+                "sha256:315d6b19643ec4afd4c41c671f9f2d65ea9d787da093487a81ead7b0bac94524"
             ],
             "index": "pypi",
-            "version": "==0.14.0"
+            "version": "==0.13.2"
         },
         "markupsafe": {
             "hashes": [

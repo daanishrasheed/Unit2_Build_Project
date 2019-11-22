@@ -20,6 +20,12 @@ column1 = dbc.Col(
 
             """
         ),
+        dcc.Markdown(
+            """
+            I got my dataset from nflsavant.com which records and analyzes every play to ever happen in
+            a given season. There
+            """
+        )
 
     ],
 )

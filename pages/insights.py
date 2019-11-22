@@ -40,7 +40,7 @@ column1 = dbc.Col(
             impact on the model.
             """
         ),
-        html.Img(src='assets/permut.png', className='mb-4'),
+        html.Img(src='assets/1perm.png', className='mb-4'),
         dcc.Markdown(
             """
             The above graph also shows how much of an effect the down has on the model which 
@@ -50,6 +50,14 @@ column1 = dbc.Col(
             """
         ),
         html.Img(src='assets/pdp.png', className='mb-4'),
+        dcc.Markdown(
+            """
+            Since the NFL has so much variety in each type of play, it is difficult to expertly predict 
+            the play type as shown in the confusion matrix below.
+            """
+        ),
+        html.Img(src='assets/conf.png', className='mb-4'),
+
 
 
 
