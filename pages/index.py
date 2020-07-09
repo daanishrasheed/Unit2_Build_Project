@@ -1,4 +1,5 @@
 # Imports from 3rd party libraries
+# Imports from 3rd party libraries
 import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
@@ -16,37 +17,24 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## The Perfect Playcaller
-
-            What is the best play to call in a given situation?
-
-            Use this app to see which play has the highest chance to be 
-            successful given the offense, defense, time left on the clock 
-            and the yardline of where the offense is.
-
-            If past trends continue, how can you make the most out of a team's 
-            offense to exploit their opponent's defensive weaknesses.
-
+            ## Your Value Proposition
+            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
+            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
             """
         ),
-        dcc.Link(dbc.Button('Make the Playcall!', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
     ],
     md=4,
 )
 
-
+gapminder = px.data.gapminder()
+fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
+           hover_name="country", log_x=True, size_max=60)
 
 column2 = dbc.Col(
     [
-        html.Img(src='assets/playcall.png',style={
-                    'height' : '90%',
-                    'width' : '75%',
-                    'float' : 'center',
-                    'position' : 'relative',
-                    'padding-top' : 0,
-                    'padding-right' : 0
-
-                }, className='img-fluid'),
+        dcc.Graph(figure=fig),
     ]
 )
 
