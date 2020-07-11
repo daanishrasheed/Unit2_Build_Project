@@ -4,20 +4,47 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
+import dash_daq as daq
+from joblib import load
+import pandas as pd
 
 # Imports from this application
 from app import app
 
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
+
+xgb = load('assets/xgb.joblib')
 column1 = dbc.Col(
     [
         dcc.Markdown(
             """
         
             ## Predictions
-            Your instructions: How to use your app to get new predictions.
+            
+            
+            Your instructions: Using the tools below, set up the situation you want simulated.
+            When you are setting up your personnel on offense, make sure that the sum of all
+            the players from each group add up to 10. As for the personnel on defense, the number 
+            of players should add up to 11. 
+            For the rest of the tools, just make sure that the situation
+            you are trying to set, is possible in a real life NFL environment.
             """
+        ),
+        dcc.Markdown(	
+            """	
+        	
+            ## Half	
+            """	
+        ),	
+        dcc.RadioItems(	
+            id='Half',		
+            options=[
+                {'label': '1st or 2nd quarter', 'value': 1},
+                {'label': '3rd or 4th quarter', 'value': 2}
+            ],
+            value=1,	
+            className='mb-5'	
         ),
     ],
     md=4,
