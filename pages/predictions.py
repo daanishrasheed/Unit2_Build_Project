@@ -26,14 +26,15 @@ column1 = dbc.Col(
             Your instructions: Using the tools below, set up the situation you want simulated.
             When you are setting up your personnel on offense, make sure that the sum of all
             the players from each group add up to 10. As for the personnel on defense, the number 
-            of players should add up to 11. 
+            of players should add up to 11.\n 
             For the rest of the tools, just make sure that the situation
             you are trying to set, is possible in a real life NFL environment.
             """
         ),
         dcc.Markdown(	
             """	
-        	
+        	\n
+            \n
             ## Half	
             """	
         ),	
@@ -67,7 +68,8 @@ column1 = dbc.Col(
         ),
         dcc.Markdown(	
             """	
-            	
+            \n
+            \n	
             ## Down:	
             """	
         ),	
@@ -92,6 +94,7 @@ column1 = dbc.Col(
             """	
         ),  	
         dcc.Input(	
+            size = 50,
             id='yardsToGo',	
             placeholder='Enter the amount of yards required for the 1st Down:',	
             type='text',	
