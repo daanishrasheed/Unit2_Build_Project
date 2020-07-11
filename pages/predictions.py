@@ -64,10 +64,7 @@ column1 = dbc.Col(
                 step=1, 	
                 value=0,  	
                 className='mb-3',	
-                handleLabel={	
-                    'label': ' ',	
-                    'showCurrentValue': True	
-                    },	
+                marks={i: '{}'.format(i) for i in range(10)},
                 ),	
             ],	
             style={'marginTop': 10, 'marginBottom': 10},            	
