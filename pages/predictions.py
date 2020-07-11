@@ -44,7 +44,7 @@ column1 = dbc.Col(
                 {'label': ' 3rd or 4th quarter', 'value': 2}
             ],
             value=1,
-            labelStyle={'display': 'inline-block'},	
+            labelStyle={'display': 'block'},	
             className='mb-5'	
         ),
     ],
