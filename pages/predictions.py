@@ -40,8 +40,8 @@ column1 = dbc.Col(
         dcc.RadioItems(	
             id='Half',		
             options=[
-                {'label': '1st or 2nd quarter', 'value': 1},
-                {'label': '3rd or 4th quarter', 'value': 2}
+                {'label': ' 1st or 2nd quarter     ', 'value': 1},
+                {'label': ' 3rd or 4th quarter', 'value': 2}
             ],
             value=1,
             labelStyle={'display': 'inline-block'},	
