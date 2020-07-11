@@ -50,7 +50,7 @@ column1 = dbc.Col(
         dcc.Markdown(	
             """	
             	
-            Seconds left in half:
+            ## Seconds left in half:
             (For this value, Multiply 60 by the amount of minutes left and 
             add the extra seconds)	
             """	
@@ -59,11 +59,44 @@ column1 = dbc.Col(
             id='Seconds', 	
             min=0, 	
             max=900,
-            handleLabel={"showCurrentValue": True,"label": "Seconds Left"}, 	
+            handleLabel={"showCurrentValue": True,"label": "Seconds"}, 	
             step=1, 	
             value=0,
             updatemode='drag',  	
             className='mb-3',	
+        ),
+        dcc.Markdown(	
+            """	
+            	
+            ## Down:	
+            """	
+        ),	
+        dcc.Slider(	
+            id='down',	
+            min=1,	
+            max=4,	
+            step=None,	
+            marks={	
+                1: '1st Down',	
+                2: '2nd Down',	
+                3: '3rd Down',	
+                4: '4th Down',	
+            },	
+            value=1,	
+            className='mb-4'	
+        ),
+        dcc.Markdown(	
+            """	
+            	
+            ## Yards To Go For 1st Down:	
+            """	
+        ),  	
+        dcc.Input(	
+            id='yardsToGo',	
+            placeholder='Enter the amount of yards required for the 1st Down:',	
+            type='text',	
+            value='',	
+            className='mb-5'	
         ),	
     ],	           	              
     md=4,
