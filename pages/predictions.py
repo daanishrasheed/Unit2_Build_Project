@@ -40,13 +40,38 @@ column1 = dbc.Col(
         dcc.RadioItems(	
             id='Half',		
             options=[
-                {'label': ' 1st or 2nd quarter     ', 'value': 1},
+                {'label': ' 1st or 2nd quarter', 'value': 1},
                 {'label': ' 3rd or 4th quarter', 'value': 2}
             ],
             value=1,
             labelStyle={'display': 'block'},	
             className='mb-5'	
         ),
+        dcc.Markdown(	
+            """	
+            	
+            Seconds left in half:
+            (For this value, Multiply 60 by the amount of minutes left and 
+            add the extra seconds)	
+            """	
+        ),
+        html.Div(  	
+            [	 	
+            dcc.Slider(              	
+                id='Seconds', 	
+                min=0, 	
+                max=900, 	
+                step=1, 	
+                value=0,  	
+                className='mb-3',	
+                handleLabel={	
+                    'label': ' ',	
+                    'showCurrentValue': True	
+                    },	
+                ),	
+            ],	
+            style={'marginTop': 10, 'marginBottom': 10},            	
+        ),              
     ],
     md=4,
 )
