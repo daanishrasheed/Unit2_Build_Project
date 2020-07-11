@@ -55,15 +55,15 @@ column1 = dbc.Col(
             add the extra seconds)	
             """	
         ),	 	
-        dcc.Slider(              	
+        daq.Slider(              	
             id='Seconds', 	
             min=0, 	
-            max=900, 	
+            max=900,
+            handleLabel={"showCurrentValue": True,"label": "Seconds Left"}, 	
             step=1, 	
             value=0,
             updatemode='drag',  	
             className='mb-3',	
-            marks={i: '{}'.format(i) for i in range(900)},
         ),	
     ],	           	              
     md=4,
