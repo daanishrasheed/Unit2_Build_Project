@@ -62,7 +62,7 @@ column1 = dbc.Col(
             step=1, 	
             value=0,  	
             className='mb-3',	
-            marks={i: '{}'.format(i) for i in range(10)},
+            marks={i: '{}'.format(i) for i in range(900)},
         ),	
     ],	           	              
     md=4,
