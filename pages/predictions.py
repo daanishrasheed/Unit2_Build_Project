@@ -54,22 +54,17 @@ column1 = dbc.Col(
             (For this value, Multiply 60 by the amount of minutes left and 
             add the extra seconds)	
             """	
-        ),
-        html.Div(  	
-            [	 	
-            dcc.Slider(              	
-                id='Seconds', 	
-                min=0, 	
-                max=900, 	
-                step=1, 	
-                value=0,  	
-                className='mb-3',	
-                marks={i: '{}'.format(i) for i in range(10)},
-                ),	
-            ],	
-            style={'marginTop': 10, 'marginBottom': 10},            	
-        ),              
-    ],
+        ),	 	
+        dcc.Slider(              	
+            id='Seconds', 	
+            min=0, 	
+            max=900, 	
+            step=1, 	
+            value=0,  	
+            className='mb-3',	
+            marks={i: '{}'.format(i) for i in range(10)},
+        ),	
+    ],	           	              
     md=4,
 )
 
