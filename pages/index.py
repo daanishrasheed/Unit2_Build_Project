@@ -19,9 +19,13 @@ column1 = dbc.Col(
         
             ## Make the Play Call!
             What is the best play to call in a given situation?
+
+            
             Use this app to see which play has the highest chance to be 	
             successful given the personnnel of both offense and defense, the
-            time left on the clock, and the position of where the offense is on the field	
+            time left on the clock, and the position of where the offense is on the field.
+
+
             If past trends continue, how can you make the most out of a team's 	
             offense and use it to succeed against the knowledge you have against the defense. 
             """
