@@ -31,11 +31,16 @@ column1 = dbc.Col(
             you are trying to set, is possible in a real life NFL environment.
             """
         ),
+        dcc.Markdown(
+            """
+            ## Situation
+            """
+        ),
         dcc.Markdown(	
             """	
         	\n
             \n
-            ## Half	
+            Half	
             """	
         ),	
         dcc.RadioItems(	
@@ -51,7 +56,7 @@ column1 = dbc.Col(
         dcc.Markdown(	
             """	
             	
-            ## Seconds left in half:
+            Seconds left in half:\n
             (For this value, Multiply 60 by the amount of minutes left and 
             add the extra seconds)
             \n\n	
@@ -71,7 +76,7 @@ column1 = dbc.Col(
             """	
             \n
             \n	
-            ## Down:	
+            Down:	
             """	
         ),	
         dcc.Slider(	
@@ -87,17 +92,11 @@ column1 = dbc.Col(
             },	
             value=1,	
             className='mb-4'	
-        ),
-        dcc.Markdown(	
-            """	
-            	
-            ## Yards To Go For 1st Down:	
-            """	
         ),  	
-        dcc.Input(	
-            size = 50,
+        dbc.Input(	
             id='yardsToGo',	
-            placeholder='Enter the amount of yards required for the 1st Down:',	
+            placeholder='Yards recquired for 1st down',
+            bs_size="lg",	
             type='number',	
             value='',	
             className='mb-5'	
@@ -105,7 +104,7 @@ column1 = dbc.Col(
         dcc.Markdown(	
             """	
             	
-            ## Yards from the Endzone:
+            Yards from the Endzone:
             \n\n	
             """	
         ),	 	
@@ -118,31 +117,6 @@ column1 = dbc.Col(
             value=0,
             updatemode='drag',  	
             className='mb-3',	
-        ),
-        dcc.Markdown(	
-            """	
-            \n
-            \n	
-            ## Number of Defenders in the Box:	
-            """	
-        ),	
-        dcc.Slider(	
-            id='defendersInTheBox',	
-            min=1,	
-            max=8,	
-            step=None,	
-            marks={	
-                1: '1',	
-                2: '2',	
-                3: '3',	
-                4: '4',
-                5: '5',
-                6: '6',
-                7: '7',
-                8: '8',	
-            },	
-            value=1,	
-            className='mb-4'	
         ),
         dcc.Markdown(
             """
@@ -175,44 +149,18 @@ column1 = dbc.Col(
             placeholder='Number of offensive linemen',
             type='number',
             value='',
-            classname='mb-4'
+            className='mb-5'
         ),
         dcc.Input(
             id='fb_count',
             placeholder='Number of fullbacks',
             type='number',
             value='',
-            classname='mb-4'
+            className='mb-4'
         ),
         dcc.Markdown(
             """
-            ## Defense Personnel
-            """
-        ),
-        dcc.Input(
-            id='dl_count',
-            placeholder='Number of defensive linemen',
-            type='number',
-            value='',
-            classname='mb-4'
-        ),
-        dcc.Input(
-            id='db_count',
-            placeholder='Number of defensive backs',
-            type='number',
-            value='',
-            classname='mb-4'
-        ),
-        dcc.Input(
-            id='lb_count',
-            placeholder='Number of linebackers',
-            type='number',
-            value='',
-            classname='mb-4'
-        ),
-        dcc.Markdown(
-            """
-            ## Formation of Offense
+            Formation of Offense
             """
         ),
         dcc.Dropdown(
@@ -228,7 +176,58 @@ column1 = dbc.Col(
                 {'label': 'Ace', 'value': 'ACE'}
             ],
             value=''
-        )  
+        ),
+        dcc.Markdown(
+            """
+            ## Defense Personnel
+            """
+        ),
+        dcc.Input(
+            id='dl_count',
+            placeholder='Number of defensive linemen',
+            type='number',
+            value='',
+            className='mb-4'
+        ),
+        dcc.Input(
+            id='db_count',
+            placeholder='Number of defensive backs',
+            type='number',
+            value='',
+            className='mb-4'
+        ),
+        dcc.Input(
+            id='lb_count',
+            placeholder='Number of linebackers',
+            type='number',
+            value='',
+            className='mb-4'
+        ),
+        dcc.Markdown(	
+            """	
+            \n
+            \n	
+            Number of Defenders in the Box:	
+            """	
+        ),
+        dcc.Slider(	
+            id='defendersInTheBox',	
+            min=1,	
+            max=8,	
+            step=None,	
+            marks={	
+                1: '1',	
+                2: '2',	
+                3: '3',	
+                4: '4',
+                5: '5',
+                6: '6',
+                7: '7',
+                8: '8',	
+            },	
+            value=1,	
+            className='mb-4'	
+        ),  
     ],	           	              
     md=4,
 )
