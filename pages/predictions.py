@@ -53,7 +53,8 @@ column1 = dbc.Col(
             	
             ## Seconds left in half:
             (For this value, Multiply 60 by the amount of minutes left and 
-            add the extra seconds)	
+            add the extra seconds)
+            \n\n	
             """	
         ),	 	
         daq.Slider(              	
@@ -97,10 +98,137 @@ column1 = dbc.Col(
             size = 50,
             id='yardsToGo',	
             placeholder='Enter the amount of yards required for the 1st Down:',	
-            type='text',	
+            type='number',	
             value='',	
             className='mb-5'	
+        ),
+        dcc.Markdown(	
+            """	
+            	
+            ## Yards from the Endzone:
+            \n\n	
+            """	
+        ),	 	
+        daq.Slider(              	
+            id='yardsToEndzone', 	
+            min=0, 	
+            max=100,
+            handleLabel={"showCurrentValue": True,"label": "Yards"}, 	
+            step=1, 	
+            value=0,
+            updatemode='drag',  	
+            className='mb-3',	
+        ),
+        dcc.Markdown(	
+            """	
+            \n
+            \n	
+            ## Number of Defenders in the Box:	
+            """	
         ),	
+        dcc.Slider(	
+            id='defendersInTheBox',	
+            min=1,	
+            max=8,	
+            step=None,	
+            marks={	
+                1: '1',	
+                2: '2',	
+                3: '3',	
+                4: '4',
+                5: '5',
+                6: '6',
+                7: '7',
+                8: '8',	
+            },	
+            value=1,	
+            className='mb-4'	
+        ),
+        dcc.Markdown(
+            """
+            ## Offense Personnel
+            """
+        ),
+        dcc.Input(
+            id='rb_count',
+            placeholder='Number of running backs',	
+            type='number',	
+            value='',	
+            className='mb-4'
+        ),
+        dcc.Input(
+            id='wr_count',
+            placeholder='Number of wide recievers',
+            type='number',
+            value='',
+            className='mb-4'
+        ),
+        dcc.Input(
+            id='te_count',
+            placeholder='Number of tightends',
+            type='number',
+            value='',
+            className='mb-4'
+        ),
+        dcc.Input(
+            id='ol_count',
+            placeholder='Number of offensive linemen',
+            type='number',
+            value='',
+            classname='mb-4'
+        ),
+        dcc.Input(
+            id='fb_count',
+            placeholder='Number of fullbacks',
+            type='number',
+            value='',
+            classname='mb-4'
+        ),
+        dcc.Markdown(
+            """
+            ## Defense Personnel
+            """
+        ),
+        dcc.Input(
+            id='dl_count',
+            placeholder='Number of defensive linemen',
+            type='number',
+            value='',
+            classname='mb-4'
+        ),
+        dcc.Input(
+            id='db_count',
+            placeholder='Number of defensive backs',
+            type='number',
+            value='',
+            classname='mb-4'
+        ),
+        dcc.Input(
+            id='lb_count',
+            placeholder='Number of linebackers',
+            type='number',
+            value='',
+            classname='mb-4'
+        ),
+        dcc.Markdown(
+            """
+            ## Formation of Offense
+            """
+        ),
+        dcc.Dropdown(
+            id='offenseFormation',
+            options=[
+                {'label': 'Shotgun', 'value': 'SHOTGUN'},
+                {'label': 'Singleback', 'value': 'SINGLEBACK'},
+                {'label': 'I-form', 'value': 'I_FORM'},
+                {'label': 'Empty', 'value': 'EMPTY'},
+                {'label': 'Pistol', 'value': 'PISTOL'},
+                {'label': 'Jumbo', 'value': 'JUMBO'},
+                {'label': 'Wildcat', 'value': 'WILDCAT'},
+                {'label': 'Ace', 'value': 'ACE'}
+            ],
+            value=''
+        )  
     ],	           	              
     md=4,
 )
