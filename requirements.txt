@@ -114,7 +114,7 @@ pycosat==0.6.3
 pycountry==19.8.18
 pycparser==2.20
 pygame==1.9.6
-Pygments==2.5.2
+Pygments==2.7.4
 pyLDAvis==2.1.2
 pylint-flask-sqlalchemy==0.1.0
 pyOpenSSL==19.1.0
