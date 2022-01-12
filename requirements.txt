@@ -97,7 +97,7 @@ patsy==0.5.1
 pickleshare==0.7.5
 Pillow==7.1.2
 pip-autoremove==0.9.1
-pipenv==2018.11.26
+pipenv==2022.1.8
 pkginfo==1.5.0.1
 plac==0.9.6
 pluggy==0.13.1
